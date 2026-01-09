@@ -27,13 +27,13 @@ spring:
           filters:
             - StripPrefix=1
 
-        - id: customers-service
-          uri: lb://CUSTOMERS-SERVICE
+        - id: core-banking-service
+          uri: lb://CORE-BANKING-SERVICE
           predicates:
-            - Path=/api/customers/**
+            - Path=/api/core-banking/**
           filters:
-            - StripPrefix=1
-
+            - StripPrefix=2
+            
         - id: customers-service
           uri: lb://CUSTOMERS-SERVICE
           predicates:
