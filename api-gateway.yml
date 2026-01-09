@@ -13,6 +13,34 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: bootcoin-service
+          uri: lb://BOOTCOIN-SERVICE
+          predicates:
+            - Path=/api/bootcoin/**
+          filters:
+            - StripPrefix=2
+
+        - id: cards-service
+          uri: lb://CARDS-SERVICE
+          predicates:
+            - Path=/api/cards/**
+          filters:
+            - StripPrefix=1
+
+        - id: customers-service
+          uri: lb://CUSTOMERS-SERVICE
+          predicates:
+            - Path=/api/customers/**
+          filters:
+            - StripPrefix=1
+
+        - id: customers-service
+          uri: lb://CUSTOMERS-SERVICE
+          predicates:
+            - Path=/api/customers/**
+          filters:
+            - StripPrefix=1
+            
         - id: reports-service
           uri: lb://REPORTS-SERVICE
           predicates:
@@ -20,9 +48,16 @@ spring:
           filters:
             - StripPrefix=1
 
-        - id: bootcoin-service
-          uri: lb://BOOTCOIN-SERVICE
+        - id: users-service
+          uri: lb://USERS-SERVICE
           predicates:
-            - Path=/api/bootcoin/**
+            - Path=/api/users/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=1
+
+        - id: wallets-service
+          uri: lb://WALLETS
+          predicates:
+            - Path=/api/wallets/**
+          filters:
+            - StripPrefix=1
