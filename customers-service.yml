@@ -8,3 +8,9 @@ eureka:
       
   instance:
     prefer-ip-address: true
+
+spring:
+  data:
+    mongodb:
+      # uri: mongodb://localhost:27017/customersdb
+      uri: mongodb://mongo-bankx:27017/customersdb
