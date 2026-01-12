@@ -14,3 +14,13 @@ spring:
     mongodb:
       # uri: mongodb://localhost:27017/reports-db
       uri: mongodb://mongo-bankx:27017/reports-db
+
+  kafka:
+    bootstrap-servers: broker:29092
+
+    consumer:
+      group-id: account-service
+      auto-offset-reset: earliest
+
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
