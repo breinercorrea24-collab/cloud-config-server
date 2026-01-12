@@ -14,3 +14,10 @@ spring:
     mongodb:
       # uri: mongodb://localhost:27017/corebankingdb
       uri: mongodb://mongo-bankx:27017/corebankingdb
+
+  kafka:
+    bootstrap-servers: broker:29092
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
