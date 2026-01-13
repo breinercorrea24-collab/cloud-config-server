@@ -9,6 +9,12 @@ eureka:
   instance:
     prefer-ip-address: true
 
+external:
+  cards:
+    service-id: cards-service
+    endpoints:
+      has-credit-card: /cards/customer/{customerId}/exists
+
 spring:
   data:
     mongodb:
