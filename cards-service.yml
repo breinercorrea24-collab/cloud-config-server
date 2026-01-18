@@ -9,6 +9,13 @@ eureka:
   instance:
     prefer-ip-address: true
 
+external:
+  cards:
+    service-id: core-banking-service
+    endpoints:
+      withdraw: /core-banking/accounts/{accountId}/withdraw
+      balance: /cards/customer/{accountId}/balance
+
 spring:
   data:
     mongodb:
