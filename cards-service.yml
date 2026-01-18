@@ -13,8 +13,8 @@ external:
   accounts:
     service-id: core-banking-service
     endpoints:
-      withdraw: /core-banking/accounts/{accountId}/withdraw
-      balance: /core-banking/accounts/{accountId}
+      withdraw: /accounts/{accountId}/withdraw
+      balance: /accounts/{accountId}
 
 spring:
   data:
